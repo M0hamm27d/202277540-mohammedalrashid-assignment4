@@ -46,29 +46,38 @@ Ensures usability across devices with the new interactive features.
 * **Logic:** Media queries and flexbox adjustments maintain readability and interactive accessibility.  
 * **UX Benefit:** Users on tablets, phones, and desktops receive a consistent and optimized experience.
 
-### 8. Weather API Integration 🆕
+### 8. Weather API Integration ⚪
 Real-time weather data displayed in the header card using the OpenWeatherMap API.
 * **Logic:** `fetch()` with `async/await` sends a request to the API. The response is parsed as JSON and temperature, description, and humidity are extracted.  
 * **Error Handling:** HTTP 401 triggers a "Demo Mode" fallback. Network errors display "Offline". Both ensure the UI never breaks.
 
-### 9. Geolocation-Based City Detection 🆕
+### 9. Geolocation-Based City Detection ⚪
 The weather widget automatically detects the visitor's city.
 * **Logic:** `navigator.geolocation.getCurrentPosition()` retrieves the user's latitude and longitude. These coordinates are passed to the API as `lat` and `lon` parameters.  
 * **Fallback:** If the user denies location access, the system defaults to Dhahran.
 
-### 10. Visitor Login & Persistence 🆕
+### 10. Visitor Login & Persistence ⚪
 A welcome modal captures the visitor's name and gender on first visit.
 * **Logic:** On page load, JavaScript checks `localStorage` for `visitorName`. If absent, the modal is displayed. When submitted, name and gender are saved to `localStorage`.  
 * **Greeting:** A personalized greeting (e.g., "Good afternoon, Mr. Mohammed") is dynamically created and prepended to the header.
 
-### 11. Animated CSS Pixel Art Weather Icons 🆕
+### 11. Animated CSS Pixel Art Weather Icons ⚪
 Custom pixel art icons represent weather conditions using the CSS `box-shadow` technique.
 * **Logic:** Each icon state (sunny, cloudy, rainy, snowy) is a separate CSS class applied to a `::before` pseudo-element. The `box-shadow` property paints individual 4×4px pixels with multi-tone shading.  
 * **Independent Particles:** Rain drops and snowflakes are spawned as individual DOM elements via `spawnParticles()`, each with randomized `animation-delay` and `animation-duration` for independent movement.
 
-### 12. Weather Status → Icon Mapping 🆕
+### 12. Weather Status → Icon Mapping ⚪
 The API description string is dynamically mapped to the correct pixel art class.
 * **Logic:** `updateWeatherUI()` checks the lowercase description for keywords like "clear", "cloud", "rain", "snow" and applies the corresponding CSS class (`sunny`, `cloudy`, `rainy`, `snowy`).
+
+### 13. UI Alignment & Form Styling 🆕
+Enhanced the user interface of the contact form and interactive elements for a cohesive layout.
+* **Logic:** Applied `display: flex` with `flex-direction: column` and left-aligned text for the form inputs.
+* **UX Benefit:** Improves readability, creates continuous visual flow, and ensures inputs span uniformly.
+
+### 14. Responsive Intersection Fixes 🆕
+Resolved overlapping issues between dynamic UI elements.
+* **Logic:** Added spacing via `margin-bottom: 30px` to `.project-filters` to prevent intersection with transformed elements upon hover.
 
 ---
 
@@ -154,7 +163,7 @@ The site is designed with a **user-first mentality**, focusing on clarity, inter
 
 ---
 
-### 🆕 Advanced Experience (Assignment 3)
+### ⚪ Advanced Experience (Assignment 3)
 
 #### 🔹 Step-by-Step Interaction Guide
 
@@ -217,7 +226,7 @@ The site is designed with a **user-first mentality**, focusing on clarity, inter
    * Drop shadows on the pixel art icons provide high contrast, ensuring visibility in both themes.
    * Toggle back to light mode — everything transitions smoothly.
 
-#### 🆕 UX Improvements Introduced
+#### ⚪ UX Improvements Introduced
 
 * Visitor persistence eliminates repetitive input on return visits.
 * Geolocation provides a personalized, location-aware experience.
@@ -225,3 +234,5 @@ The site is designed with a **user-first mentality**, focusing on clarity, inter
 * Robust fallback chain (geolocation → default city → demo mode → offline) ensures the UI never displays broken or empty states.
 * Independent particle animations (rain/snow) create a dynamic, living feel.
 * High-contrast drop shadows ensure pixel art visibility across light and dark themes.
+* Refined form layout with vertically stacked and aligned inputs for a seamless data entry experience 🆕.
+* Eliminated visual clipping and overlapping of project cards during hover interactions 🆕.
