@@ -573,3 +573,63 @@ section {
 .dark-theme .weather-details {
     color: #bbb;
 }
+
+/* --- Contact Form Styling --- */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0;
+    text-align: left;
+}
+
+#contact-form label {
+    font-weight: 600;
+    margin-bottom: -5px;
+    color: #333;
+}
+
+.dark-theme #contact-form label {
+    color: #ddd;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #737397;
+}
+
+#contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.dark-theme #contact-form input,
+.dark-theme #contact-form textarea {
+    background: #1e1e1e;
+    border-color: #444;
+    color: white;
+}
+
+.dark-theme #contact-form input:focus,
+.dark-theme #contact-form textarea:focus {
+    border-color: #9494b8;
+}
+
+#contact-form button[type="submit"] {
+    align-self: flex-start;
+    margin-top: 10px;
+}
